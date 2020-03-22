@@ -71,7 +71,6 @@ describe('Sprint Dashboard Automation with Cypress', function()
 
 
             //Click red “+” button
-            //cy.get(".text-danger[type='button']").click()
             cy.get(".fa-plus-square").eq(1).click()
 
             cy.wait(3000)
@@ -89,11 +88,9 @@ describe('Sprint Dashboard Automation with Cypress', function()
             cy.get(".fa-thumbs-up").first().click()
 
             // Check if “Likes” count goes from 0 to 1
-            //cy.get(".btn-link[type='button']").contains("1")
             cy.get(".ml-3").contains("1")
             
             //Click “x Delete” button from the card in the second column
-            //cy.get(".btn-link[type='button']").eq(1).click()
             cy.get(".fa-times-circle").last().click()
             
             cy.wait(3000)
