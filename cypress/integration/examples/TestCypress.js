@@ -9,10 +9,10 @@ describe('Sprint Dashboard Automation with Cypress', function()
             cy.visit("https://sprintboards.io/auth/login"); 
 
             // Type "sennderqa@gmail.com" in “Email Address” field
-            cy.get(".form-control[type='email']").type("sennderqa3@gmail.com")
+            cy.get(".form-control[type='email']").type("xhulio.tasho@gmail.com")
 
             // Type "n*H7A7f@&ikbwu" as password in "Password" field
-            cy.get(".form-control[type='password']").type("n*H7A7f@&ikbwu")
+            cy.get(".form-control[type='password']").type("Testcypress!")
 
             // Click "Login" button to perform login action to the dashboard
             cy.get(".btn-primary[type='submit'][type='submit']").click()
@@ -32,9 +32,7 @@ describe('Sprint Dashboard Automation with Cypress', function()
             //Type “My first board” in “Session Name” field
             cy.get(".form-control[type='text']").type("My first board")
 
-            // Select Owner
-            cy.get(".custom-select").first().select('Sennder')
-
+        
             //Scroll down to find "Create Board" button and click “Create Board” button
             cy.scrollTo('bottom').get(".btn-primary[type='submit']").click()
 
@@ -54,7 +52,7 @@ describe('Sprint Dashboard Automation with Cypress', function()
             cy.get("p.mb-0 > input").click({force: true}).type("Goal was achieved")
 
             //Type “Sprint was well planned” as description
-            cy.get('textarea').type("Sprint was well planned",{force:true})
+            cy.get('textarea').type("Test passed",{force:true})
 
 
             //Click “Add Card” button
@@ -66,8 +64,8 @@ describe('Sprint Dashboard Automation with Cypress', function()
             // Verify if Card is added with correct name and description
             // Verify if Header contains correct title : "Goal was achieved"
             cy.get(".card-header").contains("Goal was achieved")
-            // Verify if Description contains correct string information : "Sprint was well planned"
-            cy.get(".card-body").contains("Sprint was well planned")
+           
+            cy.get(".card-body").contains("Test passed")
 
 
             //Click red “+” button
